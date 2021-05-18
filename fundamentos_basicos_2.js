@@ -66,7 +66,17 @@ function contar_positivos(arreglo){
 console.log(contar_positivos([-1,3,5,-5]))
 
 //Pares e Impares - Crea una función que acepte un array. Cada vez que ese array tenga 3 valores impares seguidos, imprime (print) “¡Qué imparcial!”, y cada vez que tenga 3 pares seguidos, imprime (print) “¡Es para bien!”.
-
+function tres_parciales(arreglo){
+    for(let i=0;i<arreglo.length;i++){
+        if(arreglo[i]%2 ==0 && arreglo[i+1]%2 ==0 && arreglo[i+2]%2 ==0){
+            console.log("Es para bien")
+        }
+        if(arreglo[i]%2 ==1 && arreglo[i+1]%2 ==1 && arreglo[i+2]%2 ==1){
+            console.log("¡Qué imparcial!")
+        }
+    }
+}
+tres_parciales([2,4,6,5,8,7,9,7])
 
 //Incrementa los Segundos - Dado un array de números arr, agrega 1 a cualquier otro elemento, específicamente a aquellos cuyo índice es impar (arr[1], arr[3], arr[5], etc). Luego, console.log cada valor del array y devuelve arr. 
 //Longitudes previas - Pasado un array (similar a decir ‘tomado un array’ o ‘dado un array’) que contiene strings, reemplaza cada string con un número de acuerdo cantidad de letras (longitud) del string anterior. Por ejemplo, longitudesPrevias([“programar”,“dojo”, “genial”]) debería devolver [“programar”,9, 4]. Pista: ¿For loops solo puede ir hacia adelante?
